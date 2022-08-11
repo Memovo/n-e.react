@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js --ext .jsx src",
-    "log": "changelog-sn -i CHANGELOG.md -s -r 2",
+    "log": "changelog-sn -i changelog.md -s -r 2",
     "commit": "git cz"
   },
   "config": {
