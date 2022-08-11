@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = {
+module.exports = Object.assign({}, require('changelog-sn/lib/lint'), {
     extends: ['@commitlint/config-conventional'],
     rules: {
         'type-enum': [
@@ -13,4 +13,4 @@ module.exports = {
         'subject-case': [0, 'never'],
         'scope-empty': [0, 'never'],
     },
-}
+  })
