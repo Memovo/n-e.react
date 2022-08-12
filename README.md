@@ -1,4 +1,7 @@
-# q-k.react
+# n-e.react
+```
+git clone git@github.com:Memovo/n-e.react.git
+```
 
 ## 安装依赖
 
