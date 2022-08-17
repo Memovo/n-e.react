@@ -1,31 +1,22 @@
 import React from 'react'
 import '../../styles/todo-list.scss'
 import { xhrGetTodo } from '../../mock/todo'
-import { Button, Checkbox } from 'antd'
-import { spaces } from '../../utils/util'
-
-type itemType = Record<string, any>
+import { useStore } from "../../helpers/use-store"
+import TodoItem from '../todo-item'
 
 const TodoList: React.FC = () => {
 
-  const [list, setList] = React.useState<Array<itemType>>([])
+  const [list, setList] = React.useState<Array<itemType>>(useStore().openTodos)
 
-  React.useEffect(() => {
-    xhrGetTodo().then(res => {
-      const { status, list } = res
-      setList(status === 200 ? list : [])
-    })
-  }, [])
+  // React.useEffect(() => {
+  //   xhrGetTodo().then(res => {
+  //     const { status, list } = res
+  //     setList(status === 200 ? list : [])
+  //   })
+  // }, [])
 
   const listFun = React.useMemo(() => {
-    return list.length && list.map((item: itemType, index: number) => {
-      return <div className='item' key={index}>
-        <span>{item.text}</span>
-        <Checkbox />{spaces(3)}
-        <Button>Edit</Button>{spaces(3)}
-        <Button>Delete</Button>
-      </div>
-    })
+    return list.length && list.map((item: itemType, index: number) => <div key={index}><TodoItem item={item} /></div>)
   }, [list])
 
   return (
