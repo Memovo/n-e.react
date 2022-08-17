@@ -1,6 +1,6 @@
 # n-e.react
 ```
-git clone git@github.com:Memovo/n-e.react.git
+git clone git@github.com:Memovor/n-e.react.git
 ```
 
 ## 安装依赖
@@ -9,7 +9,7 @@ git clone git@github.com:Memovo/n-e.react.git
 yarn install
 ```
 
-### 以微前端方式进行项目启动
+### 项目启动
 
 ```
 yarn start
@@ -31,4 +31,10 @@ yarn build
 
 ```
 待补充
+```
+
+### 项目介绍
+
+```
+基于React + TypeScript实现类似TodoList的一个工具，状态通过Mobx进行管理
 ```
