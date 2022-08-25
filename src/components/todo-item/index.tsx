@@ -13,7 +13,7 @@ const App: React.FC<Record<string, TodoItem>> = props => {
   return (
     <div className='item'>
       <span>{todo.text}</span>
-      <Checkbox onChange={todo.toggleIsDone} defaultChecked={todo.isDone} />
+      <Checkbox onChange={todo.toggleIsDone} checked={todo.isDone} defaultChecked={todo.isDone} />
       {spaces(3)}
       <Button>Edit</Button>
       {spaces(3)}

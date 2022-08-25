@@ -10,8 +10,8 @@ const TodoNew = () => {
 
     return (
         <div className="todo-new">
-            <Input type="text" style={{flex: 1, marginRight: 10}}/>
-            <Button style={{width: 80}} onClick={addTodo}>Add Todo</Button>
+            <Input type="text" style={{ flex: 1, marginRight: 10 }} />
+            <Button style={{ width: 80 }} onClick={addTodo}>Add Todo</Button>
         </div>
     )
 }
