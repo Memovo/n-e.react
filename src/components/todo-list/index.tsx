@@ -1,40 +1,38 @@
 import React from 'react'
+import { useObserver } from 'mobx-react'
 import '../../styles/todo-list.scss'
-import { xhrGetTodo } from '../../mock/todo'
 import { useStore } from "../../helpers/use-store"
+import TodoItemClass  from "../../stores/todo-item"
 import TodoItem from '../todo-item'
 
 const TodoList: React.FC = () => {
 
-  const [list, setList] = React.useState<Array<itemType>>(useStore().openTodos)
+  const todoList = useStore()
 
-  // React.useEffect(() => {
-  //   xhrGetTodo().then(res => {
-  //     const { status, list } = res
-  //     setList(status === 200 ? list : [])
-  //   })
-  // }, [])
+  const todoItem = (list: Array<TodoItemClass>) => {
+    return (
+      list.length
+        ? list.map((item: TodoItemClass, index: number) => <div key={index}><TodoItem todo={item} /></div>)
+        : null
+    )
+  }
 
-  const listFun = React.useMemo(() => {
-    return list.length && list.map((item: itemType, index: number) => <div key={index}><TodoItem item={item} /></div>)
-  }, [list])
-
-  return (
+  return useObserver(() => (
     <div className='todo-list'>
       <div className='todo-temp'>
         <div className='title'>
           Open Todos
         </div>
-        {listFun}
+        {todoItem(todoList.openTodos || [])}
       </div>
       <div className='todo-temp'>
         <div className='title'>
           Finished Todos
         </div>
-        {listFun}
+        {todoItem(todoList.finishedTodos || [])}
       </div>
     </div>
-  )
+  ))
 }
 
 export default TodoList

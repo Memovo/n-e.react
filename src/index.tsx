@@ -6,7 +6,7 @@ import { TodoList } from './stores/todo-list'
 import { StoreProvider } from "./helpers/store-provider"
 
 const todoList = new TodoList([
-  'Should Starting Writing in React',
+  'telnet 192.168.1.16 8008',
   'Should Learn MobX',
   'Should Watch Once Piece :)'
 ])

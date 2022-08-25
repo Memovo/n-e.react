@@ -1,0 +1,1 @@
+declare type itemType = Record<string, any>
