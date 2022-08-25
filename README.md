@@ -1,9 +1,15 @@
-# n-e.react
+# todoList
 ```
-git clone git@github.com:Memovor/n-e.react.git
+SSH: git@github.com:Memovor/todoList.git
 ```
 
-## 安装依赖
+## 项目介绍
+
+```
+基于React + TypeScript实现类似TodoList的一个工具，状态通过Mobx进行管理
+```
+
+### 安装依赖
 
 ```
 yarn install
@@ -27,12 +33,6 @@ yarn build
 yarn lint
 ```
 
-### mobx 最佳实践
+### Mobx 最佳实践
 
-[文档](https://mobx.js.org/react-integration.html)
-
-### 项目介绍
-
-```
-基于React + TypeScript实现类似TodoList的一个工具，状态通过Mobx进行管理
-```
+[实践栗子](https://mobx.js.org/react-integration.html)
