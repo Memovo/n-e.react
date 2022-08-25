@@ -24,14 +24,12 @@ yarn build
 ### 规范检查
 
 ```
-待补充
+yarn lint
 ```
 
 ### mobx 最佳实践
 
-```
-待补充
-```
+[文档](https://mobx.js.org/react-integration.html)
 
 ### 项目介绍
 
