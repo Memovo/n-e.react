@@ -19,6 +19,11 @@ export class TodoList {
         this.list.splice(this.list.indexOf(todo), 1)
     }
 
+    @action
+    editTodo = (todo: TodoItem, value: string) => {
+        this.list[this.list.indexOf(todo)].text = value
+    }
+
     @computed
     get finishedTodos(): TodoItem[] {
         return this.list.filter(todo => todo.isDone)
